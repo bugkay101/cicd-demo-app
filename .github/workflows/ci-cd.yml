@@ -54,7 +54,7 @@ jobs:
         run: pip install pip-audit
 
       - name: Run dependency vulnerability scan
-        run: pip-audit -r requirements.txt --format json --output pip-audit-report.json || true
+        run: pip-audit -r requirements.txt --format json --output pip-audit-report.json
 
       - name: Display scan results
         if: always()
