@@ -104,4 +104,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
-        cache-to: type=gha,mode=max  # fix 2: dedented out of `with:` block
+          cache-to: type=gha,mode=max  # fix 2: dedented out of `with:` block
