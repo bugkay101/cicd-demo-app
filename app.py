@@ -2,17 +2,18 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
     return jsonify({"message": "Welcome to the SpecterOps CI/CD Demo API", "status": "ok"})
 
-@app.route("/health")
 
+@app.route("/health")
 def health():
     return jsonify({"status": "healthy"})
 
-@app.route("/items", methods=["GET"])
 
+@app.route("/items", methods=["GET"])
 def get_items():
     items = [
         {"id": 1, "name": "Widget A", "price": 9.99},
@@ -21,8 +22,8 @@ def get_items():
     ]
     return jsonify({"items": items, "count": len(items)})
 
-@app.route("/items/<int:item_id>", methods=["GET"])
 
+@app.route("/items/<int:item_id>", methods=["GET"])
 def get_item(item_id):
     items = {
         1: {"id": 1, "name": "Widget A", "price": 9.99},
