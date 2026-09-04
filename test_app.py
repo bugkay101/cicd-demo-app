@@ -31,4 +31,3 @@ def test_get_item_not_found(client):
     data = response.get_json()
     assert "error" in data
     assert data["error"] == "Item not found"
-    
